@@ -1,17 +1,23 @@
+#  Игра демонстрирует принцип открытости/закрытости
+#  в Python
+
+
 from abc import ABC, abstractmethod
 
 
+#  Создаём абстрактный класс Weapon
 class Weapon(ABC):
     @abstractmethod
     def attack(self):
         pass
 
 
+#  Создаём класс Sword, унаследованный от Weapon
 class Sword(Weapon):
     def attack(self):
         print("Боец наносит удар мечом.")
 
-
+#  Создаём класс Bow, унаследованный от Weapon
 class Bow(Weapon):
     def attack(self):
         print("Боец наносит удар из лука.")
